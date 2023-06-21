@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./result.html" method="get">
+        <fieldset>
+            <legend> <b>학식 선호도 설문조사 </b></legend>
+            <div>
+                <label for="grade">학년:</label>
+                <input type="number" name="grade" placeholder="" min="1" max="4" step="1" required>
+            </div>
+            <div> <!-- 아이디 -->
+                <label for="username">학번:</label>
+                <input type="text" name="username" placeholder="ex)17TT123" required>
+            </div>
+            <div>
+                <label for="frequency"> 식당 이용 빈도 :</label>
+                <select name="frequency">
+                    <option value="menu_1">이용 안함</option>
+                    <option value="menu_2">주2회 이하</option>
+                    <option value="menu_3">주3회 이상</option>
+                </select>
+            </div>
+            <div>
+                <label for="price">학식 가격 :</label>
+                <input type="radio" name="type_3" value="emergency">
+                <label for="type_3">싼편 </label>
+                <input type="radio" name="type_3" value="normal" checked >
+                <label for="type_3">적정</label>
+                <input type="radio" name="type_3" value="emergency">
+                <label for="type_3">비싼편 </label>       
+            </div>
+            <!-- 
+                체크박스랑 라디오는 중복 선택 가능 여부 차이가 있고
+                라디오는 그룹화를 위해서 네임 부분이 같아야 됨
+            -->
+            <div>
+                <label for="menu">선호 메뉴 :</label>
+                <input type="checkbox" name="type_2_1" value="1day">
+                <label for="type_2_1">한식</label>
+                <input type="checkbox" name="type_2_2" value="1day">
+                <label for="type_2_2">중식</label>
+                <input type="checkbox" name="type_2_3" value="1day">
+                <label for="type_2_3">양식</label>
+            </div>
+            <div>
+                <label for="summary">기타 요구 사항:</label><br>
+                <textarea name="summary" rows="10" cols="30" placeholder="요구사항을 입력해주세요."></textarea>
+            </div>            
+            <div><!-- 타입에 패스워드로 하면 마스킹을 해줌 -->
+                <label for="password">확인용 비밀번호:</label>
+                <input type="password" name="password" placeholder="PSW" required>
+            </div>
+            <div>
+                <button type="submit">제출</button>
+            </div>
+        </fieldset>
+
+        
+<!--
+인풋 패스워드는 마스킹을 해줌 
+넘버는 숫자를 입력해주는 화살표가 생기고 스텝은 한칸 간격을 설정
+    
+
+-->
+        
+
+    </form>
+    
+</body>
+</html>
